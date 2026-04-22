@@ -214,7 +214,7 @@ function AssessmentPage() {
     <>
       {/* HERO */}
       <section className="bg-[#0B1F3A] pt-24 pb-16">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+        <div className="max-w-350 mx-auto px-6 text-center">
           <ScrollAnimation>
             <p className="text-[#2DAAE1] uppercase text-xs mb-3 font-bold tracking-[0.1em]">FREE 2-MINUTE ASSESSMENT</p>
             <h1 className="text-3xl md:text-5xl font-black text-white leading-tight">
@@ -230,7 +230,7 @@ function AssessmentPage() {
 
       {/* QUIZ */}
       <section className="bg-[#F8FAFC] py-16">
-        <div className="max-w-2xl mx-auto px-6">
+        <div className="max-w-350 mx-auto px-6">
           <div className="bg-white rounded-2xl border border-[#E2E8F0] overflow-hidden shadow-sm">
             {!showResults ? (
               <div className="p-6 md:p-8">

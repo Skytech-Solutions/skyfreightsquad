@@ -187,7 +187,7 @@ function HowItWorksPage() {
     <>
       {/* SECTION 1 — HERO */}
       <section className="bg-navy pt-28 pb-20 md:pt-32 md:pb-24">
-        <div className="max-w-4xl mx-auto px-5 md:px-6 text-center">
+        <div className="max-w-350 mx-auto px-5 md:px-6 text-center">
           <ScrollAnimation>
             <p className="text-cta uppercase text-xs tracking-[0.15em] font-bold mb-4">SIMPLE TO START. LIVE IN 48 HOURS.</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
@@ -206,7 +206,7 @@ function HowItWorksPage() {
 
       {/* SECTION 2 — INTERACTIVE 5-STEP STEPPER */}
       <section className="bg-offwhite py-20 md:py-28">
-        <div className="max-w-6xl mx-auto px-5 md:px-6">
+        <div className="max-w-350 mx-auto px-5 md:px-6">
           <ScrollAnimation>
             <h2 className="text-3xl md:text-4xl font-bold text-navy text-center mb-16 md:mb-20">
               The SkyFreightSquad Onboarding Process
@@ -218,7 +218,7 @@ function HowItWorksPage() {
 
       {/* SECTION 3 — EMBEDDED MODEL */}
       <section className="bg-white py-20 border-t border-soft-border">
-        <div className="max-w-4xl mx-auto px-5 md:px-6">
+        <div className="max-w-350 mx-auto px-5 md:px-6">
           <ScrollAnimation>
             <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">Why The Embedded Model Produces Different Results</h2>
             <p className="text-base text-dim-gray leading-relaxed mb-8">
@@ -244,7 +244,7 @@ function HowItWorksPage() {
 
       {/* SECTION 4 — WHAT'S IN THE PILOT */}
       <section className="bg-offwhite py-20">
-        <div className="max-w-4xl mx-auto px-5 md:px-6">
+        <div className="max-w-350 mx-auto px-5 md:px-6">
           <ScrollAnimation>
             <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">What You Get During the 7-Day Pilot</h2>
             <p className="text-base text-dim-gray leading-relaxed mb-8">
@@ -271,7 +271,7 @@ function HowItWorksPage() {
 
       {/* SECTION 5 — TOOL COMPATIBILITY */}
       <section className="bg-navy-card py-16">
-        <div className="max-w-6xl mx-auto px-5 md:px-6 text-center">
+        <div className="max-w-350 mx-auto px-5 md:px-6 text-center">
           <ScrollAnimation>
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">We work inside the tools you already use.</h2>
             <p className="text-muted-gray mb-8">No new software. No migration. We configure to your stack.</p>
@@ -289,7 +289,7 @@ function HowItWorksPage() {
 
       {/* SECTION 6 — CLOSING CTA */}
       <section className="bg-cta py-20 text-center">
-        <div className="max-w-3xl mx-auto px-5 md:px-6">
+        <div className="max-w-350 mx-auto px-5 md:px-6">
           <ScrollAnimation>
             <h2 className="text-3xl md:text-4xl font-black text-white mb-5">Ready to See SkyFreightSquad Inside Your Operation?</h2>
             <p className="text-base md:text-lg text-white/90 mb-6 leading-relaxed">

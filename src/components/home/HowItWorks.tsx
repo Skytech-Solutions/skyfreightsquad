@@ -32,7 +32,7 @@ const steps = [
 export function HowItWorks() {
   return (
     <section id="how-it-works" className="bg-offwhite py-24">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-350 mx-auto px-6">
         <ScrollAnimation>
           <p className="text-xs uppercase tracking-[0.1em] text-cta text-center mb-3">THE PROCESS</p>
           <h2 className="text-4xl font-bold text-navy text-center mb-4">From First Call to Live Operations in 48 Hours.</h2>

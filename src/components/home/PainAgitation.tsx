@@ -22,7 +22,7 @@ const cards = [
 export function PainAgitation() {
   return (
     <section className="bg-navy py-24">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-350 mx-auto px-6">
         <ScrollAnimation>
           <p className="text-xs uppercase tracking-[0.1em] text-cta text-center mb-4">THE HIDDEN COST OF YOUR CURRENT SETUP</p>
           <h2 className="text-4xl font-bold text-white text-center mb-4 max-w-2xl mx-auto">

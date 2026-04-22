@@ -33,7 +33,7 @@ function BlogPage() {
   return (
     <>
       <section className="bg-[#F8FAFC] py-24">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-350 mx-auto px-6">
           <ScrollAnimation>
             <h1 className="text-4xl md:text-5xl font-black text-[#0B1F3A] mb-4">Freight Operations Resources</h1>
             <p className="text-lg text-[#64748B] mb-16">Practical guides for freight brokers and 3PL operators.</p>
@@ -61,7 +61,7 @@ function BlogPage() {
 
       {/* Blog CTA */}
       <section className="bg-[#0B1F3A] py-16 text-center">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-350 mx-auto px-6">
           <ScrollAnimation>
             <h2 className="text-4xl font-bold text-white mb-4">Ready to fix your freight back office?</h2>
             <p className="text-lg text-[#94A3B8] mb-8 max-w-lg mx-auto">Every article we write is based on real problems we solve every day for freight brokers and 3PLs.</p>

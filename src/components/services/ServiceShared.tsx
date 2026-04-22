@@ -43,7 +43,7 @@ export function CredentialCard({ stats }: { stats: MicroStat[] }) {
 export function TmsProof() {
   return (
     <section className="bg-white py-16 border-t border-soft-border">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-350 mx-auto px-6">
         <ScrollAnimation>
           <h3 className="text-2xl font-bold text-navy text-center mb-4">Already fluent in the tools you use:</h3>
           <div className="flex justify-center flex-wrap gap-3 mb-6">
@@ -64,7 +64,7 @@ export function TmsProof() {
 export function ServiceScope({ title, items }: { title: string; items: string[] }) {
   return (
     <section className="bg-offwhite py-20">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-350 mx-auto px-6">
         <ScrollAnimation>
           <h2 className="text-3xl font-bold text-navy text-center mb-12">{title}</h2>
         </ScrollAnimation>
@@ -94,7 +94,7 @@ export interface DetailedScopeItem {
 export function DetailedServiceScope({ title, body, items }: { title: string; body?: string; items: DetailedScopeItem[] }) {
   return (
     <section className="bg-offwhite py-20">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-350 mx-auto px-6">
         <ScrollAnimation>
           <h2 className="text-3xl font-bold text-navy text-center mb-4">{title}</h2>
           {body && <p className="text-base text-dim-gray text-center mb-12 max-w-2xl mx-auto">{body}</p>}
@@ -122,7 +122,7 @@ export function DetailedServiceScope({ title, body, items }: { title: string; bo
 export function AnswerBlock({ h2, answerBody, subH2, subBody, bullets }: { h2: string; answerBody: string; subH2: string; subBody: string; bullets: string[] }) {
   return (
     <section className="bg-white py-20 border-t border-soft-border">
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-350 mx-auto px-6">
         <ScrollAnimation>
           <h2 className="text-3xl font-bold text-navy mb-6">{h2}</h2>
           <p className="text-base text-dim-gray leading-relaxed mb-10">{answerBody}</p>
@@ -145,7 +145,7 @@ export function AnswerBlock({ h2, answerBody, subH2, subBody, bullets }: { h2: s
 export function WhatChanges({ title, bullets }: { title: string; bullets: string[] }) {
   return (
     <section className="bg-white py-20 border-t border-soft-border">
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-350 mx-auto px-6">
         <ScrollAnimation>
           <h2 className="text-3xl font-bold text-navy mb-8">{title}</h2>
           <div className="flex flex-col gap-4">
@@ -167,7 +167,7 @@ export function ServiceFAQ({ title, faqs }: { title: string; faqs: { q: string; 
 
   return (
     <section className="bg-offwhite py-20">
-      <div className="max-w-3xl mx-auto px-6">
+      <div className="max-w-350 mx-auto px-6">
         <ScrollAnimation>
           <h2 className="text-3xl font-bold text-navy text-center mb-12">{title}</h2>
         </ScrollAnimation>
@@ -203,7 +203,7 @@ export function ServiceCTA({ headline, body, pilotTag, guarantee, cta, microCopy
 }) {
   return (
     <section className="bg-cta py-20">
-      <div className="max-w-6xl mx-auto px-6 text-center">
+      <div className="max-w-350 mx-auto px-6 text-center">
         <ScrollAnimation>
           <h2 className="text-4xl font-black text-white mb-4">{headline}</h2>
           {body && <p className="text-xl text-white/90 mb-6 max-w-2xl mx-auto">{body}</p>}

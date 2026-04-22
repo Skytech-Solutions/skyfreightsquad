@@ -39,7 +39,7 @@ function ContactPage() {
     <>
       {/* HERO */}
       <section className="bg-[#0B1F3A] py-20">
-        <div className="max-w-6xl mx-auto px-6 text-center">
+        <div className="max-w-350 mx-auto px-6 text-center">
           <ScrollAnimation>
             <p className="text-[#2DAAE1] uppercase text-xs mb-3 font-bold tracking-wider">Let's talk about your operation</p>
             <h1 className="text-4xl md:text-5xl font-black text-white max-w-2xl mx-auto">One Conversation. A Dedicated Freight Squad Within 48 Hours.</h1>
@@ -53,7 +53,7 @@ function ContactPage() {
 
       {/* 3 CONTACT PATHS */}
       <section className="bg-[#F8FAFC] py-20">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-350 mx-auto px-6">
           <ScrollAnimation>
             <h2 className="text-3xl font-bold text-[#0B1F3A] text-center mb-10">Choose How You Want to Connect</h2>
           </ScrollAnimation>
@@ -128,7 +128,7 @@ function ContactPage() {
 
       {/* WHAT HAPPENS NEXT */}
       <section className="bg-white py-20 border-t border-[#E2E8F0]">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-350 mx-auto px-6">
           <ScrollAnimation>
             <h2 className="text-3xl font-bold text-[#0B1F3A] text-center mb-12">What Happens After You Reach Out</h2>
           </ScrollAnimation>

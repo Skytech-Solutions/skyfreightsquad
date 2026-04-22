@@ -15,7 +15,7 @@ export function FinalCTA() {
 
   return (
     <section className="bg-cta py-24">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-350 mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left column */}
           <ScrollAnimation>

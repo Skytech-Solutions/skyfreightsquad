@@ -28,7 +28,7 @@ const cards = [
 export function ServicesCards() {
   return (
     <section id="services" className="bg-offwhite py-24">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-350 mx-auto px-6">
         <ScrollAnimation>
           <p className="text-xs uppercase tracking-[0.1em] text-cta text-center mb-3">FOUR FUNCTIONS. ONE SQUAD.</p>
           <h2 className="text-4xl font-bold text-navy text-center mb-4">Everything Your Back-Office Needs. None of the Overhead.</h2>

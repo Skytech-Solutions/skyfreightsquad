@@ -49,7 +49,7 @@ function CountUp({ target, className, suffix, decimals, display }: { target: num
 export function LiveOpsCounter() {
   return (
     <section className="bg-offwhite py-16">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-350 mx-auto px-6">
         <ScrollAnimation>
           <p className="text-xs font-bold uppercase tracking-[0.1em] text-cta text-center mb-3">BUILT ON REAL FREIGHT OPERATIONS</p>
           <h2 className="text-3xl font-bold text-navy text-center mb-12">What Our Squad Handled This Week</h2>

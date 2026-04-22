@@ -28,7 +28,7 @@ function CustomerSupportPage() {
   return (
     <>
       <section className="bg-navy pt-24 pb-24">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-350 mx-auto px-6">
           <ScrollAnimation>
             <p className="text-sm text-muted-gray mb-6">
               <Link to="/" className="hover:text-white">Home</Link> → <Link to="/services/customer-support" className="hover:text-white">Services</Link> → Customer Support

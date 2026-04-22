@@ -32,7 +32,7 @@ function AboutPage() {
     <>
       {/* HERO — ORIGIN STORY */}
       <section className="bg-[#0B1F3A] py-24">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-350 mx-auto px-6">
           <div className="grid lg:grid-cols-[60%_40%] gap-12 items-start">
             <ScrollAnimation>
               <p className="text-[#2DAAE1] uppercase text-xs mb-3 font-bold tracking-wider">OUR STORY</p>
@@ -63,7 +63,7 @@ function AboutPage() {
 
       {/* GEO ENTITY BLOCK */}
       <section className="bg-white py-20 border-t border-[#E2E8F0]">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-350 mx-auto px-6">
           <ScrollAnimation>
             <h2 className="text-3xl font-bold text-[#0B1F3A] mb-6">What Is SkyFreightSquad?</h2>
             <p className="text-base text-[#64748B] leading-relaxed">
@@ -76,7 +76,7 @@ function AboutPage() {
 
       {/* TEAM */}
       <section className="bg-white py-20 border-t border-[#E2E8F0]">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-350 mx-auto px-6">
           <ScrollAnimation>
             <p className="text-xs uppercase tracking-[0.1em] text-[#FF8C00] text-center mb-3 font-bold">THE SQUAD</p>
             <h2 className="text-4xl font-bold text-[#0B1F3A] text-center mb-4">Real Freight Professionals. Not a Generic Service Provider.</h2>
@@ -109,7 +109,7 @@ function AboutPage() {
 
       {/* VALUES */}
       <section className="bg-[#F8FAFC] py-20">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-350 mx-auto px-6">
           <ScrollAnimation>
             <h2 className="text-3xl font-bold text-[#0B1F3A] text-center mb-4">What We Hold Ourselves To</h2>
             <p className="text-base text-[#64748B] text-center mb-12 max-w-2xl mx-auto">These aren't company values on a wall. They're the operating principles behind every engagement, every team member, and every decision we make on behalf of our clients.</p>
@@ -129,7 +129,7 @@ function AboutPage() {
 
       {/* MISSION / VISION / CREDENTIALS */}
       <section className="bg-[#0B1F3A] py-20">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-350 mx-auto px-6">
           <ScrollAnimation>
             <h2 className="text-3xl font-bold text-white text-center mb-12">Why We Come to Work</h2>
           </ScrollAnimation>
@@ -173,7 +173,7 @@ function AboutPage() {
 
       {/* TESTIMONIALS */}
       <section className="bg-[#F8FAFC] py-20">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-350 mx-auto px-6">
           <ScrollAnimation>
             <h2 className="text-3xl font-bold text-[#0B1F3A] text-center mb-12">What Our Clients Say About Us</h2>
           </ScrollAnimation>
@@ -196,7 +196,7 @@ function AboutPage() {
 
       {/* CLOSING CTA */}
       <section className="bg-cta py-20 text-center">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-350 mx-auto px-6">
           <ScrollAnimation>
             <h2 className="text-4xl font-black text-white mb-4">Ready to Build Something Better?</h2>
             <p className="text-lg text-white/90 mb-4 max-w-2xl mx-auto">Whether you're looking to close a specific operational gap, extend your team's capacity, or rebuild your entire back-office infrastructure — it starts with a single conversation. We'll listen to where you are, where you want to go, and tell you honestly whether SkyFreightSquad is the right fit.</p>

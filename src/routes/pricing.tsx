@@ -127,7 +127,7 @@ function PricingROICalculator() {
 
   return (
     <section className="bg-offwhite py-20">
-      <div className="max-w-6xl mx-auto px-5 md:px-6">
+      <div className="max-w-350 mx-auto px-5 md:px-6">
         <ScrollAnimation>
           <p className="text-xs uppercase tracking-[0.1em] text-cta text-center mb-3">ROI CALCULATOR</p>
           <h2 className="text-3xl md:text-4xl font-bold text-navy text-center mb-4">See Exactly What Your Back Office Is Costing You.</h2>
@@ -188,7 +188,7 @@ function PricingPage() {
     <>
       {/* SECTION 1 — HERO */}
       <section className="bg-navy pt-28 pb-20">
-        <div className="max-w-4xl mx-auto px-5 md:px-6 text-center">
+        <div className="max-w-350 mx-auto px-5 md:px-6 text-center">
           <ScrollAnimation>
             <p className="text-xs uppercase tracking-[0.15em] text-skyblue font-bold mb-4">SIMPLE, SCALABLE COVERAGE</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">Start With a Pilot. Scale Without a Contract.</h1>
@@ -211,7 +211,7 @@ function PricingPage() {
 
       {/* SECTION 2 — PRICING TIERS */}
       <section className="bg-navy py-24 border-t border-white/10">
-        <div className="max-w-6xl mx-auto px-5 md:px-6">
+        <div className="max-w-350 mx-auto px-5 md:px-6">
           <ScrollAnimation>
             <p className="text-xs uppercase tracking-[0.1em] text-skyblue text-center mb-3">COVERAGE TIERS</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">Three Tiers. One Consistent Standard.</h2>
@@ -263,7 +263,7 @@ function PricingPage() {
 
       {/* SECTION 3 — NO HIDDEN COSTS */}
       <section className="bg-offwhite py-20">
-        <div className="max-w-6xl mx-auto px-5 md:px-6">
+        <div className="max-w-350 mx-auto px-5 md:px-6">
           <ScrollAnimation>
             <p className="text-xs uppercase tracking-[0.1em] text-cta text-center mb-3">EVERY ENGAGEMENT INCLUDES</p>
             <h2 className="text-3xl md:text-4xl font-bold text-navy text-center mb-4">No Hidden Costs. No Surprise Add-Ons.</h2>
@@ -298,7 +298,7 @@ function PricingPage() {
 
       {/* SECTION 6 — PRICING FAQ */}
       <section className="bg-offwhite py-20">
-        <div className="max-w-6xl mx-auto px-5 md:px-6">
+        <div className="max-w-350 mx-auto px-5 md:px-6">
           <ScrollAnimation>
             <p className="text-xs uppercase tracking-[0.1em] text-skyblue text-center mb-3">PRICING QUESTIONS</p>
             <h2 className="text-3xl md:text-4xl font-bold text-navy text-center mb-12">The Questions We Get Asked Most About Pricing</h2>
@@ -327,7 +327,7 @@ function PricingPage() {
 
       {/* SECTION 7 — CLOSING CTA */}
       <section className="bg-navy py-20 text-center">
-        <div className="max-w-3xl mx-auto px-5 md:px-6">
+        <div className="max-w-350 mx-auto px-5 md:px-6">
           <ScrollAnimation>
             <p className="text-xs uppercase tracking-[0.15em] text-cta font-bold mb-4">READY TO START?</p>
             <h2 className="text-3xl md:text-4xl font-black text-white mb-5">One 45-Minute Call. Live Within 48 Hours.</h2>

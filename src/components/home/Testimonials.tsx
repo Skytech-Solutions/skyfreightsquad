@@ -21,7 +21,7 @@ const testimonials = [
 export function Testimonials() {
   return (
     <section className="bg-navy py-24">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-350 mx-auto px-6">
         <ScrollAnimation>
           <p className="text-xs uppercase tracking-[0.1em] text-skyblue text-center mb-3">CLIENT RESULTS</p>
           <h2 className="text-4xl font-bold text-white text-center mb-16">What Freight Brokers and 3PLs Say After 90 Days</h2>

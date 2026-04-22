@@ -78,7 +78,7 @@ interface CaseStudyProps {
 export function AnimatedCaseStudy({ location, body, quote, attribution, metrics }: CaseStudyProps) {
   return (
     <section className="bg-navy py-20">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-350 mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <ScrollAnimation>
             <p className="text-xs uppercase tracking-wider text-skyblue mb-3">CLIENT RESULT</p>
