@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { ScrollAnimation } from "../components/ScrollAnimation";
 import { Calendar, Mail, Phone, Check } from "lucide-react";
+import { submitFormEntry } from "../server/submissions";
 
 const BASE_URL = "https://skyfreightsquad.com";
 
@@ -24,15 +25,42 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
-  const [formState, setFormState] = useState<"idle" | "success">("idle");
+  const [formState, setFormState] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState<string>("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [challenge, setChallenge] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setFormState("success");
+    if (formState === "loading") return;
+    setFormState("loading");
+    setErrorMsg("");
+    try {
+      const res = await submitFormEntry({
+        data: {
+          source: "contact",
+          name,
+          email,
+          message,
+          payload: challenge ? { challenge } : undefined,
+        },
+      });
+      if (res.ok) {
+        setFormState("success");
+      } else {
+        setFormState("error");
+        setErrorMsg(
+          res.error === "rate_limited"
+            ? "Too many submissions from your location — try again in a few minutes."
+            : "Something went wrong. Please try again or email us directly.",
+        );
+      }
+    } catch {
+      setFormState("error");
+      setErrorMsg("Network error. Please try again.");
+    }
   };
 
   return (
@@ -77,14 +105,14 @@ function ContactPage() {
                 <Mail className="w-8 h-8 text-[#2DAAE1] mx-auto mb-4" />
                 <h4 className="text-lg font-bold text-[#0B1F3A] text-center mb-2">Send Us a Message</h4>
                 <p className="text-sm text-[#64748B] text-center mb-6">Prefer to provide context first? Fill in the form and we'll reach out within 1 business hour.</p>
-                {formState === "idle" ? (
+                {formState !== "success" ? (
                   <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                     <label className="sr-only" htmlFor="contact-name">Name</label>
-                    <input id="contact-name" type="text" placeholder="Your name" required value={name} onChange={(e) => setName(e.target.value)} className="border border-[#E2E8F0] rounded-lg px-4 py-3 text-sm focus:border-[#2DAAE1] focus:outline-none w-full" />
+                    <input id="contact-name" type="text" placeholder="Your name" required value={name} onChange={(e) => setName(e.target.value)} disabled={formState === "loading"} className="border border-[#E2E8F0] rounded-lg px-4 py-3 text-sm focus:border-[#2DAAE1] focus:outline-none w-full disabled:opacity-60" />
                     <label className="sr-only" htmlFor="contact-email">Email</label>
-                    <input id="contact-email" type="email" placeholder="Your email" required value={email} onChange={(e) => setEmail(e.target.value)} className="border border-[#E2E8F0] rounded-lg px-4 py-3 text-sm focus:border-[#2DAAE1] focus:outline-none w-full" />
+                    <input id="contact-email" type="email" placeholder="Your email" required value={email} onChange={(e) => setEmail(e.target.value)} disabled={formState === "loading"} className="border border-[#E2E8F0] rounded-lg px-4 py-3 text-sm focus:border-[#2DAAE1] focus:outline-none w-full disabled:opacity-60" />
                     <label className="sr-only" htmlFor="contact-challenge">Biggest back-office challenge</label>
-                    <select id="contact-challenge" value={challenge} onChange={(e) => setChallenge(e.target.value)} className="border border-[#E2E8F0] rounded-lg px-4 py-3 text-sm focus:border-[#2DAAE1] focus:outline-none w-full bg-white text-[#64748B]">
+                    <select id="contact-challenge" value={challenge} onChange={(e) => setChallenge(e.target.value)} disabled={formState === "loading"} className="border border-[#E2E8F0] rounded-lg px-4 py-3 text-sm focus:border-[#2DAAE1] focus:outline-none w-full bg-white text-[#64748B] disabled:opacity-60">
                       <option value="">Biggest back-office challenge</option>
                       <option value="dispatch">After-Hours Dispatch</option>
                       <option value="tracking">Track & Trace</option>
@@ -94,9 +122,12 @@ function ContactPage() {
                       <option value="unsure">Not sure yet</option>
                     </select>
                     <label className="sr-only" htmlFor="contact-message">Message</label>
-                    <textarea id="contact-message" rows={4} placeholder="Tell us about your operation..." required value={message} onChange={(e) => setMessage(e.target.value)} className="border border-[#E2E8F0] rounded-lg px-4 py-3 text-sm focus:border-[#2DAAE1] focus:outline-none w-full resize-none" />
-                    <button type="submit" className="w-full bg-[#2DAAE1] text-white rounded-full py-3 font-bold text-sm hover:bg-[#1a8fc0] transition-all">
-                      Send My Message →
+                    <textarea id="contact-message" rows={4} placeholder="Tell us about your operation..." required value={message} onChange={(e) => setMessage(e.target.value)} disabled={formState === "loading"} className="border border-[#E2E8F0] rounded-lg px-4 py-3 text-sm focus:border-[#2DAAE1] focus:outline-none w-full resize-none disabled:opacity-60" />
+                    {formState === "error" && errorMsg && (
+                      <p className="text-sm text-red-600 -mt-1">{errorMsg}</p>
+                    )}
+                    <button type="submit" disabled={formState === "loading"} className="w-full bg-[#2DAAE1] text-white rounded-full py-3 font-bold text-sm hover:bg-[#1a8fc0] transition-all disabled:opacity-60 disabled:cursor-not-allowed">
+                      {formState === "loading" ? "Sending..." : "Send My Message →"}
                     </button>
                   </form>
                 ) : (

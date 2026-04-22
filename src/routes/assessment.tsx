@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useCallback } from "react";
 import { ScrollAnimation } from "../components/ScrollAnimation";
+import { submitFormEntry } from "../server/submissions";
 
 const BASE_URL = "https://skyfreightsquad.com";
 
@@ -166,16 +167,19 @@ function AssessmentPage() {
     setSelectedOption(answers[prevKey] || null);
   }, [step, answers]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!firstName.trim() || !email.trim()) return;
+    if (submitState === "loading") return;
+
+    setSubmitState("loading");
 
     const fullAnswers = answers as Answers;
     const score = getScore(fullAnswers);
     const scoreInfo = getScoreLabel(score);
     const service = getRecommendedService(fullAnswers);
 
-    // Populate hidden form fields
+    // Keep the existing GoHighLevel submission path.
     const setField = (id: string, val: string) => {
       const el = document.getElementById(id) as HTMLInputElement | null;
       if (el) el.value = val;
@@ -189,7 +193,6 @@ function AssessmentPage() {
     setField("ghl-fear", fullAnswers.q5);
     setField("ghl-score", scoreInfo.label);
     setField("ghl-service", service);
-    // Duplicate fields
     setField("ghl-op2", fullAnswers.q1);
     setField("ghl-gap2", fullAnswers.q2);
     setField("ghl-loads2", fullAnswers.q3);
@@ -197,10 +200,28 @@ function AssessmentPage() {
     setField("ghl-fear2", fullAnswers.q5);
     setField("ghl-score2", scoreInfo.label);
     setField("ghl-service2", service);
+    const ghlForm = document.getElementById("ghl-hidden-form") as HTMLFormElement | null;
+    if (ghlForm) ghlForm.submit();
 
-    // Submit via hidden form → iframe (no CORS issues)
-    const form = document.getElementById("ghl-hidden-form") as HTMLFormElement | null;
-    if (form) form.submit();
+    // Also record the submission in Supabase for the admin panel.
+    try {
+      await submitFormEntry({
+        data: {
+          source: "assessment",
+          name: firstName.trim(),
+          email: email.trim(),
+          payload: {
+            answers: fullAnswers,
+            score,
+            score_label: scoreInfo.label,
+            recommended_service: service,
+          },
+        },
+      });
+    } catch (err) {
+      console.error("assessment_submit_error", err);
+      // Don't fail the flow — GHL submission above still ran.
+    }
 
     setSubmitState("success");
   };
