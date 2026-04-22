@@ -31,18 +31,18 @@ function AboutPage() {
   return (
     <>
       {/* HERO — ORIGIN STORY */}
-      <section className="bg-[#0B1F3A] py-24">
+      <section className="bg-[#0B1F3A] pb-24 pt-44">
         <div className="max-w-350 mx-auto px-6">
-          <div className="grid lg:grid-cols-[60%_40%] gap-12 items-start">
+          <div className="grid lg:grid-cols-[60%_40%] gap-12 items-center">
             <ScrollAnimation>
               <p className="text-[#2DAAE1] uppercase text-xs mb-3 font-bold tracking-wider">OUR STORY</p>
-              <h1 className="text-4xl md:text-5xl font-black text-white max-w-2xl leading-tight">
+              <h1 className="text-4xl md:text-5xl font-black text-white leading-tight">
                 Built Inside Freight. Exclusively for the People Who Run It.
               </h1>
-              <p className="text-lg text-[#94A3B8] mt-8 mb-6 max-w-xl leading-relaxed">
+              <p className="text-lg text-[#94A3B8] mt-8 mb-6 leading-relaxed">
                 We didn't borrow an outsourcing model from another industry and apply it to logistics. We built one from scratch — specifically for freight brokers and 3PLs.
               </p>
-              <p className="text-base text-[#94A3B8] max-w-xl leading-relaxed">
+              <p className="text-base text-[#94A3B8] leading-relaxed">
                 SkyFreightSquad exists because we spent years inside freight operations and kept seeing the same pattern: talented teams spending their best hours on the wrong work. Dispatch gaps at 2 AM. TMS data that didn't match reality. Invoices sitting in queues nobody owned. We didn't build another BPO. We built the squad that freight brokers and 3PLs actually needed — one that embeds directly inside their operation, follows their standards, and runs their back-office like it's our own.
               </p>
               <a href="https://api.leadconnectorhq.com/widget/bookings/meetings-skyfreightsquad" target="_blank" rel="noopener noreferrer" className="inline-block bg-[#FF8C00] text-white rounded-full px-8 py-4 font-bold text-sm hover:bg-[#E07800] active:scale-[0.97] transition-all mt-8">
@@ -114,7 +114,7 @@ function AboutPage() {
             <h2 className="text-3xl font-bold text-[#0B1F3A] text-center mb-4">What We Hold Ourselves To</h2>
             <p className="text-base text-[#64748B] text-center mb-12 max-w-2xl mx-auto">These aren't company values on a wall. They're the operating principles behind every engagement, every team member, and every decision we make on behalf of our clients.</p>
           </ScrollAnimation>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto">
             {values.map((v, i) => (
               <ScrollAnimation key={v.title} delay={i * 0.05}>
                 <div className="bg-white border border-[#E2E8F0] rounded-2xl p-8">

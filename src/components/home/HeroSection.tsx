@@ -4,10 +4,10 @@ import { Link } from '@tanstack/react-router';
 export function HeroSection() {
   return (
     <section className="hero-section bg-navy min-h-[92vh] flex items-center pt-16 max-w-full overflow-x-hidden">
-      <div className="hero-container mx-auto w-full">
+      <div className="hero-container mx-auto w-full lg:px-8 sm:px-0">
         <div className="hero-grid items-center min-w-0 max-w-full">
-          <ScrollAnimation className="min-w-0 max-w-full">
-            <div className="min-w-0 max-w-full">
+          <ScrollAnimation className="max-w-full">
+            <div className=" max-w-full">
               <div className="hero-eyebrow mb-4 sm:mb-6 inline-flex items-center gap-2 border border-cta/40 rounded-full px-3 sm:px-4 py-1.5 bg-cta/[0.06] animate-pulse-slow max-w-full overflow-hidden">
                 <span className="text-cta truncate">✦ Rated #1 Freight BPO · BBB Accredited</span>
               </div>

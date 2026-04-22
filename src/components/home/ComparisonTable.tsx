@@ -25,7 +25,7 @@ export function ComparisonTable() {
 
         <ScrollAnimation>
           {/* Desktop table */}
-          <div className="hidden md:block max-w-4xl mx-auto bg-white rounded-2xl border border-soft-border overflow-hidden">
+          <div className="hidden md:block max-w-6xl mx-auto bg-white rounded-2xl border border-soft-border overflow-hidden">
             <div className="grid grid-cols-3 bg-navy p-4 items-center">
               <span className="text-sm font-bold text-muted-gray uppercase tracking-wider">Comparison</span>
               <span className="text-sm font-bold text-muted-gray text-center uppercase">Hiring In-House</span>

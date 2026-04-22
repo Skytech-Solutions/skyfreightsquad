@@ -27,7 +27,7 @@ export const Route = createFileRoute("/services/billing")({
 function BillingPage() {
   return (
     <>
-      <section className="bg-navy pt-24 pb-24">
+      <section className="bg-navy pt-40 pb-24">
         <div className="max-w-350 mx-auto px-6">
           <ScrollAnimation>
             <p className="text-sm text-muted-gray mb-6">
@@ -38,16 +38,16 @@ function BillingPage() {
 
           <div className="grid lg:grid-cols-[55%_45%] gap-12 items-start">
             <ScrollAnimation>
-              <h1 className="text-5xl font-black text-white max-w-xl leading-tight">
+              <h1 className="text-5xl font-black text-white leading-tight">
                 Freight Billing That Goes Out Right. Gets Paid Faster.
               </h1>
-              <p className="text-lg text-muted-gray mt-2 mb-2 max-w-lg">
+              <p className="text-lg text-muted-gray mt-2 mb-2">
                 Rate validation, invoice creation, EDI submission, short-pay recovery, and collections — end-to-end inside your systems.
               </p>
-              <p className="text-base text-muted-gray mb-4 max-w-lg leading-relaxed">
+              <p className="text-base text-muted-gray mb-4 leading-relaxed">
                 Billing errors don't just delay payment — they signal operational unreliability to your customers. Every rejected invoice, every unworked short pay, and every dispute that ages into a write-off is a cost your business is absorbing silently. SkyFreightSquad manages your billing cycle end-to-end so invoices go out accurate, disputes get resolved, and the revenue your operation earns actually lands in your accounts.
               </p>
-              <p className="text-sm text-muted-gray mb-8 max-w-lg">
+              <p className="text-sm text-muted-gray mb-8">
                 No Lock-In — Month-to-month after your pilot. Cancel anytime.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">

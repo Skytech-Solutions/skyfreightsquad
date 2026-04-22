@@ -50,7 +50,7 @@ export function Navbar() {
   return (
     <>
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${bgClass}`}>
-        <div className="max-w-6xl mx-auto px-3 sm:px-6 flex items-center justify-between h-16">
+        <div className="max-w-350 mx-auto px-3 sm:px-6 flex items-center justify-between h-16">
           <Link to="/" className="bg-transparent flex-shrink-0" style={{ background: 'transparent', padding: 0, border: 'none', boxShadow: 'none', borderRadius: 0 }}>
             <img src="/SkyFreightSquad_Logo_Horizontal_DarkBG.png" alt="SkyFreightSquad" className="w-auto object-contain h-8 sm:h-10" style={{ display: 'block' }} />
           </Link>
@@ -66,7 +66,7 @@ export function Navbar() {
               </button>
               {dropdownOpen && (
                 <div
-                  className="absolute top-full left-0 bg-navy-card rounded-xl p-3 border border-white/10 w-72 shadow-xl"
+                  className="absolute top-9 left-0 bg-navy-card rounded-xl p-3 border border-white/10 w-72 shadow-xl"
                   style={{ marginTop: 0, pointerEvents: 'auto' }}
                   onMouseEnter={handleDropdownPanelEnter}
                   onMouseLeave={handleDropdownPanelLeave}

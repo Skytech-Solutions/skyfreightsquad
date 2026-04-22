@@ -28,7 +28,7 @@ function TrackTracePage() {
   return (
     <>
       {/* HERO */}
-      <section className="bg-navy pt-24 pb-24">
+      <section className="bg-navy pt-40 pb-24">
         <div className="max-w-350 mx-auto px-6">
           <ScrollAnimation>
             <p className="text-sm text-muted-gray mb-6">
@@ -39,13 +39,13 @@ function TrackTracePage() {
 
           <div className="grid lg:grid-cols-[55%_45%] gap-12 items-start">
             <ScrollAnimation>
-              <h1 className="text-5xl font-black text-white max-w-xl leading-tight">
+              <h1 className="text-5xl font-black text-white leading-tight">
                 Every Load Tracked. Every Exception Handled Before It Escalates.
               </h1>
-              <p className="text-lg text-muted-gray mt-2 mb-2 max-w-lg">
+              <p className="text-lg text-muted-gray mt-2 mb-2">
                 Real-time visibility. Proactive exception management. Inside your TMS, 24/7.
               </p>
-              <p className="text-base text-muted-gray mb-4 max-w-lg leading-relaxed">
+              <p className="text-base text-muted-gray mb-4 leading-relaxed">
                 Missed updates turn into missed appointments. Missed appointments turn into detention charges, delivery failures, and customer relationships that quietly erode. SkyFreightSquad keeps every load visible and every exception resolved before it compounds — so your operation runs on control, not reaction.
               </p>
               <p className="text-sm text-muted-gray mb-8 max-w-lg">

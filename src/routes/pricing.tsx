@@ -138,7 +138,7 @@ function PricingROICalculator() {
 
         <div className="grid lg:grid-cols-2 gap-8">
           <ScrollAnimation>
-            <div className="bg-white rounded-2xl p-8 border border-soft-border">
+            <div className="bg-white rounded-2xl p-8 border border-soft-border h-full">
               <h4 className="text-lg font-bold text-navy mb-6">Your current operation:</h4>
               <Slider label="Loads per week" value={loads} min={10} max={500} step={10} onChange={setLoads} display={`${loads} loads/week`} />
               <Slider label="After-hours staffing cost per month" value={staffing} min={1000} max={30000} step={500} onChange={setStaffing} display={`$${staffing.toLocaleString()}/mo`} />

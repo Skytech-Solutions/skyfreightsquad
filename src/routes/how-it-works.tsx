@@ -190,7 +190,7 @@ function HowItWorksPage() {
         <div className="max-w-350 mx-auto px-5 md:px-6 text-center">
           <ScrollAnimation>
             <p className="text-cta uppercase text-xs tracking-[0.15em] font-bold mb-4">SIMPLE TO START. LIVE IN 48 HOURS.</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6" >
               From First Call to Live Operations in 48 Hours
             </h1>
             <p className="text-lg md:text-xl text-muted-gray mb-8 max-w-2xl mx-auto leading-relaxed">

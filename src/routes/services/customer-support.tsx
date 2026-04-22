@@ -27,7 +27,7 @@ export const Route = createFileRoute("/services/customer-support")({
 function CustomerSupportPage() {
   return (
     <>
-      <section className="bg-navy pt-24 pb-24">
+      <section className="bg-navy pt-40 pb-24">
         <div className="max-w-350 mx-auto px-6">
           <ScrollAnimation>
             <p className="text-sm text-muted-gray mb-6">
@@ -38,16 +38,16 @@ function CustomerSupportPage() {
 
           <div className="grid lg:grid-cols-[55%_45%] gap-12 items-start">
             <ScrollAnimation>
-              <h1 className="text-5xl font-black text-white max-w-xl leading-tight">
+              <h1 className="text-5xl font-black text-white leading-tight">
                 Your Customer Queue. Managed. Every Message Answered.
               </h1>
-              <p className="text-lg text-muted-gray mt-2 mb-2 max-w-lg">
+              <p className="text-lg text-muted-gray mt-2 mb-2">
                 SLA-driven. Your brand. Your standards. Every inbound message handled without gaps.
               </p>
-              <p className="text-base text-muted-gray mb-4 max-w-lg leading-relaxed">
+              <p className="text-base text-muted-gray mb-4 leading-relaxed">
                 Slow response times and unanswered messages don't just frustrate customers — they erode the relationships freight businesses depend on for growth. SkyFreightSquad manages your customer communication queues under your brand and to your standards — so every customer experiences your operation as responsive, reliable, and professional.
               </p>
-              <p className="text-sm text-muted-gray mb-8 max-w-lg">
+              <p className="text-sm text-muted-gray mb-8">
                 No Lock-In — Month-to-month after your pilot. Cancel anytime.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">

@@ -147,8 +147,8 @@ export function WhatChanges({ title, bullets }: { title: string; bullets: string
     <section className="bg-white py-20 border-t border-soft-border">
       <div className="max-w-350 mx-auto px-6">
         <ScrollAnimation>
-          <h2 className="text-3xl font-bold text-navy mb-8">{title}</h2>
-          <div className="flex flex-col gap-4">
+          <h2 className="text-3xl font-bold text-navy mb-8 text-center">{title}</h2>
+          <div className="flex flex-col gap-4 items-center">
             {bullets.map((b) => (
               <div key={b} className="flex items-start gap-3">
                 <Check className="w-5 h-5 text-cta flex-shrink-0 mt-0.5" />

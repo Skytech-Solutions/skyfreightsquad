@@ -38,13 +38,13 @@ function ContactPage() {
   return (
     <>
       {/* HERO */}
-      <section className="bg-[#0B1F3A] py-20">
+      <section className="bg-[#0B1F3A] pb-20 pt-40">
         <div className="max-w-350 mx-auto px-6 text-center">
           <ScrollAnimation>
             <p className="text-[#2DAAE1] uppercase text-xs mb-3 font-bold tracking-wider">Let's talk about your operation</p>
-            <h1 className="text-4xl md:text-5xl font-black text-white max-w-2xl mx-auto">One Conversation. A Dedicated Freight Squad Within 48 Hours.</h1>
-            <p className="text-lg text-[#94A3B8] mt-4 max-w-xl mx-auto">No pitch. No pressure. We'll map your operation and tell you honestly whether SkyFreightSquad is the right fit.</p>
-            <p className="text-base text-[#94A3B8] mt-4 max-w-xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-black text-white max-w-3xl mx-auto">One Conversation. A Dedicated Freight Squad Within 48 Hours.</h1>
+            <p className="text-lg text-[#94A3B8] mt-4 max-w-3xl mx-auto">No pitch. No pressure. We'll map your operation and tell you honestly whether SkyFreightSquad is the right fit.</p>
+            <p className="text-base text-[#94A3B8] mt-4 max-w-3xl mx-auto">
               The discovery call is 45 minutes. We listen to where you are, where you want to go, and what gaps are costing you the most. If SkyFreightSquad is the right fit, we're live within 48 hours. If not, you walk away with a clear picture of where your operation needs work — at no cost.
             </p>
           </ScrollAnimation>
@@ -128,7 +128,7 @@ function ContactPage() {
 
       {/* WHAT HAPPENS NEXT */}
       <section className="bg-white py-20 border-t border-[#E2E8F0]">
-        <div className="max-w-350 mx-auto px-6">
+        <div className="max-w-2xl mx-auto px-6">
           <ScrollAnimation>
             <h2 className="text-3xl font-bold text-[#0B1F3A] text-center mb-12">What Happens After You Reach Out</h2>
           </ScrollAnimation>

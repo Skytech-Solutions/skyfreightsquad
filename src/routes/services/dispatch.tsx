@@ -40,16 +40,16 @@ function DispatchPage() {
 
           <div className="grid lg:grid-cols-[55%_45%] gap-12 items-start">
             <ScrollAnimation>
-              <h1 className="text-5xl font-black text-white max-w-xl leading-tight">
+              <h1 className="text-5xl font-black text-white leading-tight">
                 After-Hours Freight Dispatch. Covered Every Shift.
               </h1>
-              <p className="text-lg text-muted-gray mt-2 mb-2 max-w-lg">
+              <p className="text-lg text-muted-gray mt-2 mb-2 ">
                 Loads don't stop moving at 5 PM. Neither does your coverage.
               </p>
-              <p className="text-base text-muted-gray mb-4 max-w-lg leading-relaxed">
+              <p className="text-base text-muted-gray mb-4  leading-relaxed">
                 After-hours gaps don't just cost loads — they cost carrier trust, customer confidence, and revenue that doesn't come back. SkyFreightSquad delivers continuous dispatch coverage embedded inside your TMS and SOPs, so your freight keeps moving every hour of every day.
               </p>
-              <p className="text-sm text-muted-gray mb-8 max-w-lg">
+              <p className="text-sm text-muted-gray mb-8 ">
                 No Lock-In — Month-to-month after your pilot. Cancel anytime.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">

@@ -3,7 +3,7 @@ import { Link } from '@tanstack/react-router';
 export function Footer() {
   return (
     <footer className="bg-navy border-t border-white/[0.08] pt-16 pb-8">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-350 mx-auto px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>

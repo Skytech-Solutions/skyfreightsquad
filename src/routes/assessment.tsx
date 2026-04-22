@@ -220,7 +220,7 @@ function AssessmentPage() {
             <h1 className="text-3xl md:text-5xl font-black text-white leading-tight">
               Is Your Freight Back-Office Costing You More Than You Think?
             </h1>
-            <p className="text-lg text-[#94A3B8] mt-4 max-w-xl mx-auto">
+            <p className="text-lg text-[#94A3B8] mt-4 mx-auto">
               Answer 5 questions. Get a personalised coverage gap score and a specific service recommendation — based on how your operation actually runs.
             </p>
             <p className="text-sm text-[#64748B] mt-3">Taken by 300+ freight brokers and 3PLs across the US</p>
