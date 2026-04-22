@@ -17,11 +17,18 @@ import { Route as CareersRouteImport } from './routes/careers'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AssessmentRouteImport } from './routes/assessment'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as AdminRouteRouteImport } from './routes/admin/route'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AdminIndexRouteImport } from './routes/admin/index'
 import { Route as ServicesTrackTraceRouteImport } from './routes/services/track-trace'
 import { Route as ServicesDispatchRouteImport } from './routes/services/dispatch'
 import { Route as ServicesCustomerSupportRouteImport } from './routes/services/customer-support'
 import { Route as ServicesBillingRouteImport } from './routes/services/billing'
+import { Route as AdminUsersRouteImport } from './routes/admin/users'
+import { Route as AdminSettingsRouteImport } from './routes/admin/settings'
+import { Route as AdminLoginRouteImport } from './routes/admin/login'
+import { Route as AdminSubmissionsIndexRouteImport } from './routes/admin/submissions.index'
+import { Route as AdminSubmissionsIdRouteImport } from './routes/admin/submissions.$id'
 
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
@@ -63,10 +70,20 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminRouteRoute = AdminRouteRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const AdminIndexRoute = AdminIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AdminRouteRoute,
 } as any)
 const ServicesTrackTraceRoute = ServicesTrackTraceRouteImport.update({
   id: '/track-trace',
@@ -88,9 +105,35 @@ const ServicesBillingRoute = ServicesBillingRouteImport.update({
   path: '/billing',
   getParentRoute: () => ServicesRoute,
 } as any)
+const AdminUsersRoute = AdminUsersRouteImport.update({
+  id: '/users',
+  path: '/users',
+  getParentRoute: () => AdminRouteRoute,
+} as any)
+const AdminSettingsRoute = AdminSettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => AdminRouteRoute,
+} as any)
+const AdminLoginRoute = AdminLoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => AdminRouteRoute,
+} as any)
+const AdminSubmissionsIndexRoute = AdminSubmissionsIndexRouteImport.update({
+  id: '/submissions/',
+  path: '/submissions/',
+  getParentRoute: () => AdminRouteRoute,
+} as any)
+const AdminSubmissionsIdRoute = AdminSubmissionsIdRouteImport.update({
+  id: '/submissions/$id',
+  path: '/submissions/$id',
+  getParentRoute: () => AdminRouteRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRouteRouteWithChildren
   '/about': typeof AboutRoute
   '/assessment': typeof AssessmentRoute
   '/blog': typeof BlogRoute
@@ -99,10 +142,16 @@ export interface FileRoutesByFullPath {
   '/how-it-works': typeof HowItWorksRoute
   '/pricing': typeof PricingRoute
   '/services': typeof ServicesRouteWithChildren
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/settings': typeof AdminSettingsRoute
+  '/admin/users': typeof AdminUsersRoute
   '/services/billing': typeof ServicesBillingRoute
   '/services/customer-support': typeof ServicesCustomerSupportRoute
   '/services/dispatch': typeof ServicesDispatchRoute
   '/services/track-trace': typeof ServicesTrackTraceRoute
+  '/admin/': typeof AdminIndexRoute
+  '/admin/submissions/$id': typeof AdminSubmissionsIdRoute
+  '/admin/submissions/': typeof AdminSubmissionsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -114,14 +163,21 @@ export interface FileRoutesByTo {
   '/how-it-works': typeof HowItWorksRoute
   '/pricing': typeof PricingRoute
   '/services': typeof ServicesRouteWithChildren
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/settings': typeof AdminSettingsRoute
+  '/admin/users': typeof AdminUsersRoute
   '/services/billing': typeof ServicesBillingRoute
   '/services/customer-support': typeof ServicesCustomerSupportRoute
   '/services/dispatch': typeof ServicesDispatchRoute
   '/services/track-trace': typeof ServicesTrackTraceRoute
+  '/admin': typeof AdminIndexRoute
+  '/admin/submissions/$id': typeof AdminSubmissionsIdRoute
+  '/admin/submissions': typeof AdminSubmissionsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/admin': typeof AdminRouteRouteWithChildren
   '/about': typeof AboutRoute
   '/assessment': typeof AssessmentRoute
   '/blog': typeof BlogRoute
@@ -130,15 +186,22 @@ export interface FileRoutesById {
   '/how-it-works': typeof HowItWorksRoute
   '/pricing': typeof PricingRoute
   '/services': typeof ServicesRouteWithChildren
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/settings': typeof AdminSettingsRoute
+  '/admin/users': typeof AdminUsersRoute
   '/services/billing': typeof ServicesBillingRoute
   '/services/customer-support': typeof ServicesCustomerSupportRoute
   '/services/dispatch': typeof ServicesDispatchRoute
   '/services/track-trace': typeof ServicesTrackTraceRoute
+  '/admin/': typeof AdminIndexRoute
+  '/admin/submissions/$id': typeof AdminSubmissionsIdRoute
+  '/admin/submissions/': typeof AdminSubmissionsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/admin'
     | '/about'
     | '/assessment'
     | '/blog'
@@ -147,10 +210,16 @@ export interface FileRouteTypes {
     | '/how-it-works'
     | '/pricing'
     | '/services'
+    | '/admin/login'
+    | '/admin/settings'
+    | '/admin/users'
     | '/services/billing'
     | '/services/customer-support'
     | '/services/dispatch'
     | '/services/track-trace'
+    | '/admin/'
+    | '/admin/submissions/$id'
+    | '/admin/submissions/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -162,13 +231,20 @@ export interface FileRouteTypes {
     | '/how-it-works'
     | '/pricing'
     | '/services'
+    | '/admin/login'
+    | '/admin/settings'
+    | '/admin/users'
     | '/services/billing'
     | '/services/customer-support'
     | '/services/dispatch'
     | '/services/track-trace'
+    | '/admin'
+    | '/admin/submissions/$id'
+    | '/admin/submissions'
   id:
     | '__root__'
     | '/'
+    | '/admin'
     | '/about'
     | '/assessment'
     | '/blog'
@@ -177,14 +253,21 @@ export interface FileRouteTypes {
     | '/how-it-works'
     | '/pricing'
     | '/services'
+    | '/admin/login'
+    | '/admin/settings'
+    | '/admin/users'
     | '/services/billing'
     | '/services/customer-support'
     | '/services/dispatch'
     | '/services/track-trace'
+    | '/admin/'
+    | '/admin/submissions/$id'
+    | '/admin/submissions/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AdminRouteRoute: typeof AdminRouteRouteWithChildren
   AboutRoute: typeof AboutRoute
   AssessmentRoute: typeof AssessmentRoute
   BlogRoute: typeof BlogRoute
@@ -253,12 +336,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/admin/': {
+      id: '/admin/'
+      path: '/'
+      fullPath: '/admin/'
+      preLoaderRoute: typeof AdminIndexRouteImport
+      parentRoute: typeof AdminRouteRoute
     }
     '/services/track-trace': {
       id: '/services/track-trace'
@@ -288,8 +385,65 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesBillingRouteImport
       parentRoute: typeof ServicesRoute
     }
+    '/admin/users': {
+      id: '/admin/users'
+      path: '/users'
+      fullPath: '/admin/users'
+      preLoaderRoute: typeof AdminUsersRouteImport
+      parentRoute: typeof AdminRouteRoute
+    }
+    '/admin/settings': {
+      id: '/admin/settings'
+      path: '/settings'
+      fullPath: '/admin/settings'
+      preLoaderRoute: typeof AdminSettingsRouteImport
+      parentRoute: typeof AdminRouteRoute
+    }
+    '/admin/login': {
+      id: '/admin/login'
+      path: '/login'
+      fullPath: '/admin/login'
+      preLoaderRoute: typeof AdminLoginRouteImport
+      parentRoute: typeof AdminRouteRoute
+    }
+    '/admin/submissions/': {
+      id: '/admin/submissions/'
+      path: '/submissions'
+      fullPath: '/admin/submissions/'
+      preLoaderRoute: typeof AdminSubmissionsIndexRouteImport
+      parentRoute: typeof AdminRouteRoute
+    }
+    '/admin/submissions/$id': {
+      id: '/admin/submissions/$id'
+      path: '/submissions/$id'
+      fullPath: '/admin/submissions/$id'
+      preLoaderRoute: typeof AdminSubmissionsIdRouteImport
+      parentRoute: typeof AdminRouteRoute
+    }
   }
 }
+
+interface AdminRouteRouteChildren {
+  AdminLoginRoute: typeof AdminLoginRoute
+  AdminSettingsRoute: typeof AdminSettingsRoute
+  AdminUsersRoute: typeof AdminUsersRoute
+  AdminIndexRoute: typeof AdminIndexRoute
+  AdminSubmissionsIdRoute: typeof AdminSubmissionsIdRoute
+  AdminSubmissionsIndexRoute: typeof AdminSubmissionsIndexRoute
+}
+
+const AdminRouteRouteChildren: AdminRouteRouteChildren = {
+  AdminLoginRoute: AdminLoginRoute,
+  AdminSettingsRoute: AdminSettingsRoute,
+  AdminUsersRoute: AdminUsersRoute,
+  AdminIndexRoute: AdminIndexRoute,
+  AdminSubmissionsIdRoute: AdminSubmissionsIdRoute,
+  AdminSubmissionsIndexRoute: AdminSubmissionsIndexRoute,
+}
+
+const AdminRouteRouteWithChildren = AdminRouteRoute._addFileChildren(
+  AdminRouteRouteChildren,
+)
 
 interface ServicesRouteChildren {
   ServicesBillingRoute: typeof ServicesBillingRoute
@@ -311,6 +465,7 @@ const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AdminRouteRoute: AdminRouteRouteWithChildren,
   AboutRoute: AboutRoute,
   AssessmentRoute: AssessmentRoute,
   BlogRoute: BlogRoute,
